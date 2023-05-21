@@ -3,6 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IdentityService } from './Shared/service/IdentityService/IdentityService';
+import { signalRservices } from './Core/Srvices/SignalRservice';
+import { ApiHelperService } from './Core/Srvices/ApiHelperService';
 
 @NgModule({
   declarations: [
@@ -10,9 +15,13 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+
   ],
-  providers: [],
+  providers: [signalRservices,IdentityService,ApiHelperService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
