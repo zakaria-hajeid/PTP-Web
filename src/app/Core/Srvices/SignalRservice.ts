@@ -21,6 +21,7 @@ export class signalRservices {
   private hubConnection: HubConnection
     public startConnection = () => {
       debugger;
+      //za
 
 let MessagehEADERS:MessageHeaders= {'Access-Control-Allow-Origin':'*','mode':'no-cors'
 ,'Access-Control-Allow-Credentials':'false'
